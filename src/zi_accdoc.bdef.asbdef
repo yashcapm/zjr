@@ -1,0 +1,23 @@
+managed with additional save
+implementation in class zbp_i_accdoc06 unique;
+strict ( 2 );
+
+define behavior for ZI_ACCDOC
+//persistent table zfit_accdoc
+with unmanaged save
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Id;
+  determination post on save  {create;}
+   mapping for zfit_accdoc corresponding;
+   field ( readonly ) belnr,   bukrs,   gjahr,   blart,   bldat,   budat,   waers,   bupla,   secco,   xblnr,   bktxt,   hkont,   dmbtr,   shkzg,   kostl,   prctr,   mwskz,   bank,
+                      hbkid,   kunnr,   lifnr,   umskz,   sgtxt,   zuonr,   zlsch;
+
+  //action ( features : instance ) Jrpost result [1] $self;
+
+ }

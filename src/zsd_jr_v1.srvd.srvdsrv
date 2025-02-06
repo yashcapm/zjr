@@ -1,0 +1,4 @@
+@EndUserText.label: 'JR SD'
+define service Zsd_jr_v1 {
+  expose ZC_JR_V1 as jrpost;
+}
